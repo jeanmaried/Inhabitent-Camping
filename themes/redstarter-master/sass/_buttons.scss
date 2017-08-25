@@ -1,0 +1,30 @@
+.read {
+	display: inline-block;
+	background-color: $color__links-nd-titles;
+	margin-top: 1rem;
+	padding: .4rem;
+	a{
+		color: white;
+	}
+}
+
+.read2{
+		border: .05rem solid;
+		padding: .5rem 1rem .5rem 1rem;
+		display: inline-block;
+		font-size: .8rem;
+		a{
+			color: $color__text-main;
+		}
+}
+
+.read3{
+	@extend .read2;
+	border-color: white;
+	color: white;
+}
+
+.read4{
+	@extend .read2;
+	margin: 0 .3rem 0 0 ;
+}

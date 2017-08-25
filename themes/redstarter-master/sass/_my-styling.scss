@@ -1,0 +1,79 @@
+main{
+	margin: 0 2rem 0 2rem;
+	padding-bottom: 2rem;
+}
+
+.split_page{
+	width: 70%;
+	border-right: .1rem solid $color__background-screen;
+}
+
+
+//page-about.php styling
+.about h1 {
+		padding: 25%;
+		color: white;
+		font-weight: bold;
+}
+
+.about_text{
+	margin: 3rem;
+
+	h1{
+		font-weight: bold;
+	}
+}
+
+// sinlge-products.php
+ .product-img{
+ 	width: 45%;
+ }
+
+ .product-info{
+ 	max-width: 45%;
+ }
+
+//single-adventure
+
+.no_logo{
+	padding: 35%;
+}
+
+
+
+// taxonomy.php
+.cat_size{
+	width: 25%;
+}
+
+a {
+	text-decoration: none;
+}
+
+//search
+
+.split_page{
+	nav{
+		span{
+			background-color: $color__links-nd-titles;
+			padding: .2rem .4rem .2rem .4rem;
+		}
+		span:hover{
+			background-color: grey;
+		}
+
+		a{
+			background-color: $color__links-nd-titles;
+			padding: .2rem .4rem .2rem .4rem;
+		}
+		a:hover{
+			background-color: grey;
+		}
+	}
+}
+
+
+
+
+
+

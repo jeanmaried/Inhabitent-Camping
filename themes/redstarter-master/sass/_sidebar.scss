@@ -1,0 +1,56 @@
+//sidebar
+
+.sidebar{
+	padding: 2rem;
+	line-height: 100%;
+
+	h3{
+		font-weight: bold;
+	}
+
+}
+
+//footer.php
+
+.site-footer{
+	background-image: url("http://localhost:8888/project-wordpress/wp-content/themes/redstarter-master/assets/images/dark-wood.png");
+	height: 20rem;
+	color: white;
+}
+
+.widget-area{
+	padding-top: 3rem;
+	line-height: 100%;
+
+	#media_image-2{
+		padding-top: 1rem;
+		padding-right: 2rem;
+		width: 100%;
+		position: absolute;
+		display: flex;
+		justify-content: flex-end;
+	}
+
+	h3{
+		color: orange;
+		font-weight: bold;
+	}
+
+	#text-3, #text-4{
+		padding-left: 2rem;
+	}
+
+}
+
+@media only screen and (max-width: 760px){
+	.site-footer{
+		height: 22rem;
+	}
+
+	#text-3, #text-4{
+		padding-top: 4rem;
+		font-size: .8rem;
+		flex-wrap: nowrap;
+		text-align: center;
+	}
+}

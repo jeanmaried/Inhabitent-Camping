@@ -1,0 +1,72 @@
+//archive-adventures
+
+.big_box2{
+	width: 49%;
+	height: 25rem;
+	padding: 1rem;
+	margin-bottom:2%;
+
+	h1{
+		color:white;
+		font-weight: lighter;
+	}
+}
+
+//product-archive page
+
+.shop_stuff_product_page{
+	width: 40%;
+}
+
+.product_title{
+	padding-top: 2rem;
+
+	h1 {
+		font-weight: bold;
+	}
+	div a{
+		color: $color__links-nd-titles;
+	}
+}
+
+.product_grid {
+	border-top: .1rem dotted $color__background-screen;
+	padding-top: 2rem;
+
+	.prod_box{
+		width: 24%;
+		height: 14rem;
+		margin-bottom: 1rem;
+
+		.prod_img{
+			height: 80%;
+		}
+
+		.prod_info{
+			width: 100%;
+			padding: .5rem;
+			font-size: .7rem;
+			border-top: .3rem;
+			border-bottom: .1rem;
+			border-right: .1rem;
+			border-left: .1rem;
+			border-style: solid;
+			border-color: $color__background-screen;
+		}
+	}
+}
+
+.prod_title{
+	overflow: hidden;
+	white-space: nowrap;
+	width: 75%;
+}
+
+.prod_price{
+	overflow: hidden;
+	width: 25%;
+}
+
+.prod_title:after{
+	content: ".....................................................";
+}

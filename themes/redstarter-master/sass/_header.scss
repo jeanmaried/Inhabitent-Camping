@@ -1,0 +1,61 @@
+.site-header{
+	background: transparent;
+  	position: relative;
+  	width: 100%;
+  	padding: .2rem 2rem .2rem 2rem;
+  	border-bottom: .1rem solid $color__background-screen;
+
+	img{
+		width: 2.5rem;
+	}
+}
+
+.site-header2{
+	@extend .site-header;
+	border-bottom: none;
+	position: absolute;
+}
+
+.main-navigation{
+	width: 60%;
+	li{
+		white-space: nowrap;
+	}
+}
+
+#masthead{
+	a{
+		width: 40%;
+	}
+}
+
+#search{
+	position: absolute;
+	top: 2rem;
+ 	right: 0.5rem;
+ 	display: none;
+}
+
+.menu-main_menu-container{
+	width: 100%;
+
+	ul li a{
+		color: white;
+	}
+	ul li i{
+		color: white;
+	}
+}
+
+#site-navigation2 .menu-main_menu-container ul li a{
+	color: $color__links-nd-titles;
+}
+
+#site-navigation2 .menu-main_menu-container ul li i{
+	color: $color__links-nd-titles;
+}
+
+#primary-menu{
+	display: flex;
+	justify-content: space-between;
+}
