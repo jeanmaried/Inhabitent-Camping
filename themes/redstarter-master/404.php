@@ -12,9 +12,9 @@
 get_header(); ?>
 
 	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+		<main id="main" class="site-main flex direction-row" role="main">
 
-			<section class="error-404 not-found">
+			<section class="error-404 not-found split_page">
 				<header class="page-header">
 					<h1 class="page-title"><?php echo esc_html( 'Oops! That page can&rsquo;t be found.' ); ?></h1>
 				</header><!-- .page-header -->
@@ -25,6 +25,57 @@ get_header(); ?>
 					<?php get_search_form(); ?>
 
 					<?php the_widget( 'WP_Widget_Recent_Posts' ); ?>
+
+<!-- recent posts -->
+
+<h2>RECENT POSTS</h2>
+
+<?php
+function frl_get_requested_slug(){
+  global $wp;
+  $q = $wp->request;
+  $q = preg_replace("/(\.*)(html|htm|php|asp|aspx)$/","",$q);
+  $parts = explode('/', $q);
+  $q = end($parts);
+  return $q;
+}
+
+function frl_list_posts($posts){
+  if(empty($posts))
+  return '';
+  $list = array();
+  foreach($posts as $cpost) {
+    $title = apply_filters('the_title', $cpost->post_title);
+    $url = get_permalink($cpost);
+    $list[] = "<li><a href='{$url}'>{$title}</a></li>"; 
+  }
+  return implode('', $list);
+}		
+		
+?>
+
+
+<?php 
+$q = frl_get_requested_slug();
+$args = array(
+  'post_type' => 'journal',
+  'post_status' => 'publish',
+  'name' => $q,
+  'posts_per_page' => 5
+);
+$query = new WP_Query($args); //query posts by slug
+
+?>
+<?php 
+$query->query($args);
+if(!empty($query->posts)):
+  ?>
+  <ul class="posts-list">
+  <?php echo frl_list_posts($query->posts);?>
+  </ul>
+<?php endif;?>
+
+<!-- end recent posts -->
 
 					<?php if ( red_starter_categorized_blog() ) : // Only show the widget if site has multiple categories. ?>
 					<div class="widget widget_categories">
@@ -50,6 +101,10 @@ get_header(); ?>
 
 				</div><!-- .page-content -->
 			</section><!-- .error-404 -->
+
+		<div>
+			<?php get_sidebar(); ?>
+		</div>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->

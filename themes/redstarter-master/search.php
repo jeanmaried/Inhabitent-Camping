@@ -24,7 +24,7 @@ get_header(); ?>
 
 				<?php get_template_part( 'template-parts/content', 'search' ); ?>
 
-				<a href="'.get_permalink().'"><div class="read2">READ MORE <i class="fa fa-long-arrow-right" aria-hidden="true"></i></div>
+				<?php echo '<a href="'.get_permalink().'"><div class="read2">READ MORE <i class="fa fa-long-arrow-right" aria-hidden="true"></i></div>'?>
 
 			<?php endwhile; ?>
 

@@ -39,18 +39,4 @@
 	#text-3, #text-4{
 		padding-left: 2rem;
 	}
-
-}
-
-@media only screen and (max-width: 760px){
-	.site-footer{
-		height: 22rem;
-	}
-
-	#text-3, #text-4{
-		padding-top: 4rem;
-		font-size: .8rem;
-		flex-wrap: nowrap;
-		text-align: center;
-	}
 }

@@ -11,10 +11,8 @@ single-journal.php
 
 ?>
 
-<div class="flex direction-row">
-
-
-		<div class='split_page'>
+<div id="primary" class="content-area flex direction-row">
+	<main id="main" class="site-main split_page" role="main">
 
 		<?php while ( have_posts() ) : the_post(); ?>
 
@@ -41,19 +39,12 @@ single-journal.php
 
 		<?php endwhile; // End of the loop. ?>
 
-<form action="" class="flex direction row">
-  NAME<br><input type="text" name="name"><br>
-  EMAIL <input type="email" name="email"><br>
-  WEBSITE <input type="text" name="email"><br>
-  <input type="submit" value="Submit">
-</form>
-
 		</main><!-- #main -->
-	</div><!-- #primary -->
 
-<div>
-	<?php get_sidebar(); ?>
-</div>
+
+	<div>
+		<?php get_sidebar(); ?>
+	</div>
 
 </div>
 

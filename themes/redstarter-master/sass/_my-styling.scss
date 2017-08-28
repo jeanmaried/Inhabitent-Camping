@@ -1,3 +1,4 @@
+//general page styling
 main{
 	margin: 0 2rem 0 2rem;
 	padding-bottom: 2rem;
@@ -6,10 +7,36 @@ main{
 .split_page{
 	width: 70%;
 	border-right: .1rem solid $color__background-screen;
+
+	nav{
+		margin-top: 2rem;
+
+		span{
+			background-color: $color__links-nd-titles;
+			padding: .2rem;
+			margin: .2rem;
+		}
+		span:hover{
+			background-color: grey;
+		}
+	
+		a{
+			background-color: $color__links-nd-titles;
+			padding: .2rem;
+			margin: .2rem;
+		}
+		a:hover{
+			background-color: grey;
+		}
+	}
+}
+
+a {
+	text-decoration: none;
 }
 
 
-//page-about.php styling
+//page-about, find-us, and 404
 .about h1 {
 		padding: 25%;
 		color: white;
@@ -24,8 +51,22 @@ main{
 	}
 }
 
-// sinlge-products.php
+iframe{
+	width: 100%;
+	padding-right: 2rem;
+}
+
+.posts-list{
+	list-style: none;
+	li a{
+		color: $color__links-nd-titles;
+		margin: -2.35rem;
+	}
+}
+
+// sinlge-products/adventures
  .product-img{
+ 	margin-top: 2rem;
  	width: 45%;
  }
 
@@ -33,47 +74,28 @@ main{
  	max-width: 45%;
  }
 
-//single-adventure
-
 .no_logo{
 	padding: 35%;
 }
 
+//forms and search
 
-
-// taxonomy.php
-.cat_size{
-	width: 25%;
+input[name="message"]{
+	height: 35%;
 }
 
-a {
-	text-decoration: none;
+input[value="Submit"]{
+	background-color: $color__links-nd-titles;
+	color: white;
+	width: 20%;
 }
 
-//search
+.required{
+      color:red;
+}
 
-.split_page{
-	nav{
-		span{
-			background-color: $color__links-nd-titles;
-			padding: .2rem .4rem .2rem .4rem;
-		}
-		span:hover{
-			background-color: grey;
-		}
-
-		a{
-			background-color: $color__links-nd-titles;
-			padding: .2rem .4rem .2rem .4rem;
-		}
-		a:hover{
-			background-color: grey;
-		}
+.entry-title{
+	a{
+		color: $color__links-nd-titles
 	}
 }
-
-
-
-
-
-

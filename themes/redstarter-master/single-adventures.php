@@ -14,14 +14,12 @@ echo '
 
 		<?php while ( have_posts() ) : the_post(); ?>
 
+			<div class='flex direction-column'>
+			<?php echo '<h1><strong>'.strtoupper(get_the_title()).'</strong></h1>'; ?>
+			<h3>
+			<?php echo "BY ".strtoupper(get_the_author()); ?>
+			</h3>
 			<?php
-			echo "<div class='flex direction-column'>";
-			echo '<h1><strong>'.strtoupper(get_the_title()).'</strong></h1>';
-			echo "<h3>";
-			echo "BY ".strtoupper(get_the_author());
-			echo "</h3>";
-			$price = get_field("price");
-			echo $price;
 			the_content(); ?>
 			<div class="flex direction-row">
 				<a href=""><div class="read4"><i class="fa fa-facebook" aria-hidden="true"></i> LIKE</div></a>
