@@ -1,7 +1,7 @@
 Inhabitent Camping Site
 ==============
 
-Landing Page
+Wordpress theme
 ------------
  
 ### The purpose of this project
